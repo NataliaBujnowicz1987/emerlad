@@ -18,7 +18,7 @@
     <meta name="author" content="FOXdesign - www.foxdesign.ie" />
 
 </head>
-<body class='top'>
+<body id='home'>
     <nav>
         <!-- desktop version -->
         <div class='logo-img nav-main'><img src='assets/logo-nav.png' alt='Emerald Cleaning Services - Logo' /></div>
@@ -30,7 +30,7 @@
                 <a href='#services'>Services</a>
             </li>
             <li class='logo-name'>
-                <a href='#top'>
+                <a href='#home'>
                     Emerald <br/>Cleaning Services
                 </a></li>
             <li>
@@ -65,14 +65,17 @@
 
     </nav>
 
-    <header id='home' class='header-wrap'>
-        <div class='header-content'>
-           <h1>Emerald Cleaning Services, <br/>professional lorem ipsum.</h1>
-           <p>We are a cleaning company based in North Co. Dublin. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-           <div class='header-buttons'>
-               <button class='green-button'>Contact Us</button>
-               <button>Learn More</button>
-           </div>
+    <header class='header-wrap'>
+        <div class='header-container'>
+            <div></div>
+            <div class='header-content'>
+                <h1>Emerald Cleaning Services, <br/>professional lorem ipsum.</h1>
+                <p>We are a cleaning company based in North Co. Dublin. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <div class='header-buttons'>
+                    <button class='green-button'>Contact Us</button>
+                    <button>Learn More</button>
+                </div>
+            </div>
         </div>
        
     </header>
@@ -108,6 +111,7 @@
 
     <section id='services' class='section-container'>
         <h1 class='section-header'>Our Services</h1>
+
         <div class='boxes-container'>
             <div class='services-box'>
                <div class='services-box-img'>
@@ -146,14 +150,131 @@
                 </div>
             </div>
         </div>
-        
     </section>
 
+    <section id='gallery'class='section-container'>
 
-    <section id='gallery'>gallery</section>
-    <section id='contact'>contact</section>
+        <h1 class='section-header'>Gallery</h1>
 
-    <footer>footer</footer>
+        <div class='gallery-container'>
+            <div class='gallery-box'>
+                <img src='assets/emerald-img.jpg' alt='Emerald Cleaning Services - power washing'/>
+            </div>
+            <div class='gallery-box'>
+                <img src='assets/emerald-windowsCleaning.jpg' alt='Emerald Cleaning Services - window cleaning'/>
+            </div>
+            <div class='gallery-box'>
+                <img src='assets/emerald-img2.jpg' alt='Emerald Cleaning Services - power washing'/>
+            </div>
+            <div class='gallery-box'>
+                <img src='assets/emerald-powerWashing.jpg' alt='Emerald Cleaning Services - power washing'/>
+            </div>
+            <div class='gallery-box'>
+                <img src='assets/emerald-img3.jpg' alt='Emerald Cleaning Services'/>
+            </div>
+            <div class='gallery-box'>
+                <img src='assets/emerald-img5.jpg' alt='Emerald Cleaning Services - power washing'/>
+            </div>
+            <div class='gallery-box'>
+                <img src='assets/emerald-RoofCleaning.jpg' alt='Emerald Cleaning Services - roof cleaning'/>
+            </div>
+        
+            <div class='gallery-box'>
+                <img src='assets/emerlad - img4.jpg' alt='Emerald Cleaning Services - High Quality Services'/>
+            </div>
+            <div class='gallery-box'>
+                <img src='assets/emerald-covidCleaning.jpg' alt='Emerald Cleaning Services - covid deep cleaning'/>
+            </div>
+        </div>
+    
+    </section>
+
+    <section id='contact' >
+        <div class='section-container contact-container'>
+            <h1 class='section-header'>Contact Us</h1>
+            <p class='contact-subheader'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+            <div class='contact-details'>
+
+                    <div class='contact-box'>
+                        <div class='contact-box-item'>
+                            <img src='assets/icon-home.png' alt='Emerald Cleaning Services - Location'/>
+                            <p>Swords, Dublin, Irleland</p>
+                        </div>
+                        <div class='contact-box-item'>
+                            <img src='assets/icon-phone.png' alt='Emerald Cleaning Services - Mobile Number'/>
+                            <p><a href="tel:+353-087-653-32-25">+353-087-653-32-25</a></p>
+                        </div>
+                        <div class='contact-box-item'>
+                            <img src='assets/icon-email.png' alt='Emerald Cleaning Services - Email Address'/>
+                            <p><a href = "mailto: emeraldcleaningireland@gmail.com">emeraldcleaningireland@gmail.com</a></p>
+                        </div>
+                        <div class='contact-box-item'>
+                            <img src='assets/icon-fb.png' alt='Emerald Cleaning Services - Facebook FanPage'/>
+                            <p><a href='https://www.facebook.com/EmeraldCleaning.ie' target='blank'>www.facebook.com/EmeraldCleaning.ie</a></p>
+                        </div>
+                    </div>
+
+                    <div class='contact-line'></div>
+
+                    <div class='contact-form'>
+                        <form method="post" action="" >
+                            <input id="username" type="text" name="name" placeholder="Your name:" required />
+                            <br>
+            
+                            <input id="mobileNumber" type="text" name="number" placeholder="Your mobile number:" />
+                            <br>
+                
+                            <input id="email" type="email" name="email" placeholder="Enter email address:" required />
+                            <br>
+                
+                            <textarea rows="4" id="textareaMessage" name="textarea" placeholder="Your message:"
+                                required></textarea>
+                            <br>
+                            <input class="submit-button" type="submit" value="Send message">
+                        </form>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class='footer-container'>
+
+            <div class='footer-logo'>
+                <img src='assets/logo.png' alt='Emerald - Cleaning Services logo'/>
+                <h3 class='footer-desktop-h3'>Emerald <br/>Cleaning Services</h3>
+                <h3 class='footer-mobile-h3'>Emerald Cleaning Services</h3>
+            </div>
+
+            <div class='footer-nav'>
+                <ul>
+                    <li>
+                        <a href='#home'>Home</a>
+                    </li>
+                    |
+                    <li>
+                        <a href='#about'>About</a>
+                    </li>
+                    |
+                    <li>
+                        <a href='#services'>Services</a>
+                    </li>
+                    |
+                    <li>
+                        <a href='#gallery'>Gallery</a>
+                    </li>
+                    |
+                    <li>
+                        <a href='#contact'>Contact</a>
+                    </li>
+                </ul>
+            </div>
+          
+        </div>
+
+        <p class='footer-header'>All rights reserved © 2021 | Created by <a href='http://www.foxdesign.ie' target='blank'>FOXdesign</a></p>
+    </footer>
 
 
     <script src="app.js"></script> 
