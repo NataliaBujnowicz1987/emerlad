@@ -71,7 +71,7 @@
             <div class='header-content'>
                 <h1>Professional quality cleaning with a personal touch.</h1>
                 <p>Welcome to Emerald Cleaning Services, where quality, communication, service, and reliability are our core values.  We provide top-quality cleaning and related services that meet and exceed the expectations of today’s demanding clients.
-                <br/><br/>
+                <br/>
                 We are based in North Co. Dublin, but we offer our services all over Ireland. We are professionals with 10-years of industry experience.  Contact us whenever you need our services, we are here 24/7 to help. </p>
                 <div class='header-buttons'>
                     <button class='green-button'><a href='#contact'>Contact Us</a></button>
@@ -158,37 +158,73 @@
     </section>
 
     <section id='gallery'class='section-container'>
-
         <h1 class='section-header'>Gallery</h1>
 
         <div class='gallery-container'>
             <div class='gallery-box'>
-                <img src='assets/emerald-img.jpg' alt='Emerald Cleaning Services - power washing'/>
+                <img src='assets/emerald-img.jpg' alt='Emerald Cleaning Services - power washing' onclick="openLightbox();toSlide(1)" class="hover-shadow preview" />
             </div>
             <div class='gallery-box'>
-                <img src='assets/emerald-windowsCleaning.jpg' alt='Emerald Cleaning Services - window cleaning'/>
+                <img src='assets/emerald-windowsCleaning.jpg' alt='Emerald Cleaning Services - window cleaning' onclick="openLightbox();toSlide(2)" class="hover-shadow preview" />
             </div>
             <div class='gallery-box'>
-                <img src='assets/emerald-img2.jpg' alt='Emerald Cleaning Services - power washing'/>
+                <img src='assets/emerald-img2.jpg' alt='Emerald Cleaning Services - power washing' onclick="openLightbox();toSlide(3)" class="hover-shadow preview" />
             </div>
             <div class='gallery-box'>
-                <img src='assets/emerald-powerWashing.jpg' alt='Emerald Cleaning Services - power washing'/>
+                <img src='assets/emerald-powerWashing.jpg' alt='Emerald Cleaning Services - power washing' onclick="openLightbox();toSlide(4)" class="hover-shadow preview"/>
             </div>
             <div class='gallery-box'>
-                <img src='assets/emerald-img3.jpg' alt='Emerald Cleaning Services'/>
+                <img src='assets/emerald-img3.jpg' alt='Emerald Cleaning Services' onclick="openLightbox();toSlide(5)" class="hover-shadow preview"/>
             </div>
             <div class='gallery-box'>
-                <img src='assets/emerald-img5.jpg' alt='Emerald Cleaning Services - power washing'/>
+                <img src='assets/emerald-img5.jpg' alt='Emerald Cleaning Services - power washing' onclick="openLightbox();toSlide(6)" class="hover-shadow preview"/>
             </div>
             <div class='gallery-box'>
-                <img src='assets/emerald-RoofCleaning.jpg' alt='Emerald Cleaning Services - roof cleaning'/>
+                <img src='assets/emerald-RoofCleaning.jpg' alt='Emerald Cleaning Services - roof cleaning' onclick="openLightbox();toSlide(7)" class="hover-shadow preview"/>
             </div>
         
             <div class='gallery-box'>
-                <img src='assets/emerlad - img4.jpg' alt='Emerald Cleaning Services - High Quality Services'/>
+                <img src='assets/emerlad - img4.jpg' alt='Emerald Cleaning Services - High Quality Services' onclick="openLightbox();toSlide(8)" class="hover-shadow preview"/>
             </div>
             <div class='gallery-box'>
-                <img src='assets/emerald-covidCleaning.jpg' alt='Emerald Cleaning Services - covid deep cleaning'/>
+                <img src='assets/emerald-covidCleaning.jpg' alt='Emerald Cleaning Services - covid deep cleaning' onclick="openLightbox();toSlide(9)" class="hover-shadow preview"/>
+            </div>
+        </div>
+
+        <div id="Lightbox" class="modal">
+            <div class="modal-content">  
+                <span class="close pointer" onclick="closeLightbox()">&times;</span>
+                <div class="slide">
+                    <img src=" assets/emerald-img.jpg" class="image-slide" />
+                </div>
+                <div class="slide">
+                    <img src=" assets/emerald-windowsCleaning.jpg" class="image-slide" />
+                </div>
+                <div class="slide">
+                    <img src=" assets/emerald-img2.jpg" class="image-slide" />
+                </div>
+                <div class="slide">
+                    <img src=" assets/emerald-powerWashing.jpg" class="image-slide" />
+                </div>
+                <div class="slide">
+                    <img src=" assets/emerald-img3.jpg" class="image-slide" />
+                </div>
+                <div class="slide">
+                    <img src=" assets/emerald-img5.jpg" class="image-slide" />
+                </div>
+                <div class="slide">
+                    <img src=" assets/emerald-RoofCleaning.jpg" class="image-slide" />
+                </div>
+                <div class="slide">
+                    <img src=" assets/emerlad - img4.jpg" class="image-slide" />
+                </div>
+                <div class="slide">
+                    <img src=" assets/emerald-covidCleaning.jpg" class="image-slide" />
+                </div>
+             
+          
+                <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
             </div>
         </div>
     
@@ -281,6 +317,51 @@
         <p class='footer-header'>All rights reserved © 2021 | Created by <a href='http://www.foxdesign.ie' target='blank'>FOXdesign</a></p>
     </footer>
 
+    <!-- gallery slider -->
+    <script defer>
+        let slideIndex = 1;
+        showSlide(slideIndex);
+
+        function openLightbox() {
+            document.getElementById('Lightbox').style.display = 'flex';
+        };
+
+        function closeLightbox() {
+            document.getElementById('Lightbox').style.display = 'none';
+        };
+
+        function changeSlide(n) {
+            showSlide(slideIndex += n);
+        };
+
+        function toSlide(n) {
+            showSlide(slideIndex = n);
+        };
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            let modalPreviews = document.getElementsByClassName('modal-preview');
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            };
+
+            if (n < 1) {
+                slideIndex = slides.length;
+            };
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            };
+
+            for (let i = 0; i < modalPreviews.length; i++) {
+                modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
+            };
+
+            slides[slideIndex - 1].style.display = 'block';
+            // modalPreviews[slideIndex - 1].className += ' active';
+        };
+    </script>
 
     <script src="app.js"></script> 
     
