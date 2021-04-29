@@ -239,7 +239,32 @@ section {
     font-family: 'Cardo', serif;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    transition: all 0.6s linear;
+    transition: all 0.3s linear;
+}
+
+.btn-animation {
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-animation:after {
+    background: var(--logo-color);
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: 0.3;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: -10;
+}
+
+.btn-animation:hover:after {
+    left: 120%;
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .header-buttons button:hover {
@@ -249,6 +274,7 @@ section {
 .green-button {
     background: linear-gradient(322.96deg, #1C933B 1.56%, rgba(28, 147, 59, 0) 115.8%);
     outline: 1px solid var(--grey-color) !important;
+
 }
 
 .green-button:hover {
@@ -407,7 +433,6 @@ section {
     border: 3px solid;
     border-color:var(--grey-color);
     padding: 10px 10px 5px 10px;
-
 }
 
 .slide {
@@ -448,7 +473,6 @@ img.hover-shadow {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5), 0 9px 20px 0 rgba(0, 0, 0, 1);
 }
 /* Content */
-
 .content {
     border: 5px solid;
     border-color: black;
@@ -512,8 +536,6 @@ img.hover-shadow {
     }
 } */
 
-
-
 /* contact section */
 #contact {
     background-color: var(--grey-color);
@@ -558,11 +580,12 @@ img.hover-shadow {
 
 .contact-box-item a {
   color: var(--black-color);
-  transition: all 0.7s linear;
+  transition: all 0.1s linear;
 }
 
 .contact-box-item a:hover {
     color:  var(--green-color);
+    text-decoration: underline;
   }
 
 .contact-line {
